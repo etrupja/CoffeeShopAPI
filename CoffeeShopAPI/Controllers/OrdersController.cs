@@ -1,6 +1,7 @@
 ﻿using CoffeeShopAPI.Data;
 using CoffeeShopAPI.Data.DTOs;
 using CoffeeShopAPI.Data.Models;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,8 @@ namespace CoffeeShopAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    //Add CORS policy name
+    [EnableCors("AllowAll")]
     public class OrdersController : ControllerBase
     {
         private AppDbContext _context;
